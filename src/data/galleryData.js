@@ -1,0 +1,20 @@
+export const galleryData = [
+  { id: 1, image: "/images/tattoosandes1.webp", title: "Dragon Forearm Sleeve", caption: "Japanese dragon wrapping the forearm in rich black and grey.", category: "Japanese" },
+  { id: 2, image: "/images/tattoosandes2.jpg", title: "Dark Realism Skull", caption: "Custom dark realism skull piece with deep contrast shading.", category: "Realism" },
+  { id: 3, image: "/images/tattoosandes3.jpg", title: "Peony & Serpent", caption: "Oriental serpent intertwined with Japanese peonies.", category: "Japanese" },
+  { id: 4, image: "/images/tattoosandes4.jpg", title: "Tiger Backpiece", caption: "Full back traditional tiger rendered freehand.", category: "Traditional" },
+  { id: 5, image: "/images/tattoosandes5.jpg", title: "Freehand Geometric Flow", caption: "Organic geometric lines tailored to client anatomy.", category: "Blackwork" },
+  { id: 6, image: "/images/tattoosandes6.jpg", title: "Demon Mask", caption: "Japanese demon mask with intricate line detail.", category: "Japanese" },
+  { id: 7, image: "/images/tattoobikal1.jpg", title: "Oriental Samurai Mask", caption: "Traditional oriental samurai back piece.", category: "Japanese" },
+  { id: 8, image: "/images/tattoobikal2.jpg", title: "Waves & Koi Fish", caption: "Japanese waves and koi sleeve with smooth gradient.", category: "Japanese" },
+  { id: 9, image: "/images/tattoobikal3.jpg", title: "High Contrast Dragon", caption: "Bold line high contrast Japanese dragon.", category: "Japanese" },
+  { id: 10, image: "/images/tattoobikal4.jpg", title: "Hannya Mask Chest", caption: "Japanese Hannya mask with shading.", category: "Japanese" },
+  { id: 11, image: "/images/tattoobikal5.jpg", title: "Full Back Oriental Motif", caption: "Intricate full back oriental composition.", category: "Japanese" },
+  { id: 12, image: "/images/tattoobikal6.jpg", title: "Black & Grey Sleeve", caption: "Custom black & grey oriental sleeve.", category: "Blackwork" },
+  { id: 13, image: "/images/tattooyanu1.jpg", title: "Botanical Fine Line", caption: "Subtle aesthetic floral needlework.", category: "Fine Line" },
+  { id: 14, image: "/images/tattooyanu2.jpg", title: "Minimalist Floral Line", caption: "Micro fine line floral tattoo.", category: "Fine Line" },
+  { id: 15, image: "/images/tattooyanu3.jpg", title: "Micro Realism Script", caption: "Ultra precise fine line lettering.", category: "Fine Line" },
+  { id: 16, image: "/images/tattooyanu4.jpg", title: "Delicate Geometry", caption: "Subtle minimalist geometric linework.", category: "Fine Line" },
+  { id: 17, image: "/images/tattooyanu5.jpg", title: "Butterfly Aesthetic", caption: "Fine line butterfly with soft shading.", category: "Fine Line" },
+  { id: 18, image: "/images/tattooyanu6.jpg", title: "Fine Line Lotus", caption: "Minimal lotus flower crafted with micro needle.", category: "Fine Line" }
+];

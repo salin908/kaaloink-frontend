@@ -1,0 +1,197 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+  }
+}
+
+.font-heading {
+  font-family: 'Cinzel', serif;
+}
+
+.font-nav {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Global Button Tactile Click Effect & Micro-Animations */
+button, input[type="submit"], input[type="button"], a.btn, .clickable-btn {
+  transition: transform 0.15s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.15s ease, filter 0.15s ease, background-color 0.2s ease, border-color 0.2s ease;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+button:active, input[type="submit"]:active, input[type="button"]:active, a.btn:active, .clickable-btn:active {
+  transform: scale(0.95);
+  opacity: 0.88;
+  filter: brightness(1.15);
+}
+
+button:hover, a.btn:hover, .clickable-btn:hover {
+  cursor: pointer;
+}
+
+/* Admin Dashboard Photo Card Hovering Effects */
+.admin-photo-card {
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.admin-photo-card:hover {
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 12px 25px -5px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.12);
+}
+
+.admin-photo-card img {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), filter 0.4s ease;
+}
+
+.admin-photo-card:hover img {
+  transform: scale(1.06);
+  filter: brightness(1.1);
+}
+
+/* File Upload Container & File Choose Button Tactile Click Effect */
+input[type="file"] {
+  cursor: pointer;
+}
+
+input[type="file"]::file-selector-button {
+  background-color: #18181b;
+  color: #e4e4e7;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 7px 16px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 12px;
+}
+
+input[type="file"]::file-selector-button:hover {
+  background-color: #27272a;
+  border-color: rgba(255, 255, 255, 0.5);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+input[type="file"]::file-selector-button:active {
+  transform: scale(0.92);
+  background-color: #3f3f46;
+  filter: brightness(1.2);
+}
+
+.file-upload-box {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.file-upload-box:hover {
+  border-color: rgba(16, 185, 129, 0.5) !important;
+  background-color: rgba(16, 185, 129, 0.05) !important;
+}
+
+.file-upload-box:active {
+  transform: scale(0.98);
+  border-color: #10b981 !important;
+}
+
+/* Premium Boutique Studio Utility Classes */
+.boutique-card {
+  background-color: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: border-color 0.35s ease, transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.boutique-card:hover {
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+.gold-price {
+  color: #e6d8c3;
+  letter-spacing: 0.5px;
+}
+
+.boutique-btn {
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background-color: transparent;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.boutique-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+/* Sentence & Heading Text Entrance Animations */
+@keyframes fadeInUpSentence {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-sentence {
+  animation: fadeInUpSentence 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-sentence-delay-1 { animation-delay: 0.15s; }
+.animate-sentence-delay-2 { animation-delay: 0.3s; }
+.animate-sentence-delay-3 { animation-delay: 0.45s; }
+.animate-sentence-delay-4 { animation-delay: 0.6s; }
+
+/* Subtle Gold Text Highlight Accent */
+.gold-text-shimmer {
+  background: linear-gradient(90deg, #ffffff 0%, #e6d8c3 50%, #ffffff 100%);
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: textShimmerMove 6s linear infinite;
+}
+
+@keyframes textShimmerMove {
+  to {
+    background-position: 200% center;
+  }
+}
+
+
