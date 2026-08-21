@@ -3,6 +3,7 @@ import { useSearchParams, useLocation } from 'react-router-dom';
 import { Calendar, MessageCircle, Upload, CheckCircle, Clock } from 'lucide-react';
 import { artistsData } from '../data/artistsData';
 import { API_BASE_URL } from '../config/api';
+import SEO from '../components/SEO';
 
 export default function BookingPage() {
   const [searchParams] = useSearchParams();
@@ -134,6 +135,11 @@ export default function BookingPage() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-body pt-32 pb-24">
+      <SEO
+        title="Book Tattoo Appointment"
+        description="Book a custom tattoo consultation or appointment with resident masters at Kaalo Ink Tattoo Studio in Dharan, Nepal."
+        path="/booking"
+      />
       <div className="max-w-4xl mx-auto px-6 sm:px-8">
         {/* HERO HEADER */}
         <div className="text-center mb-16">

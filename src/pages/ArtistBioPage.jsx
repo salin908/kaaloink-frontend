@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, Camera, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { artistsData as fallbackArtists } from '../data/artistsData';
 import LightboxModal from '../components/LightboxModal';
+import SEO from '../components/SEO';
 import { API_BASE_URL, getImageUrl } from '../config/api';
 
 export default function ArtistBioPage() {
@@ -46,9 +47,10 @@ export default function ArtistBioPage() {
   if (!artist) {
     return (
       <div className="min-h-screen text-white font-body pt-36 pb-24 text-center">
+        <SEO title="Artist Profile" description="Explore resident artist portfolios at Kaalo Ink Studio in Dharan, Nepal." path={`/artists/${slug}`} />
         <h2 className="font-heading text-2xl font-bold uppercase mb-4">Artist Not Found</h2>
         <Link to="/artists" className="font-nav text-xs uppercase border border-white px-6 py-3 inline-block font-semibold">
-          Back to All Artists
+          Return to Artists
         </Link>
       </div>
     );

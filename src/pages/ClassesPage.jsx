@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import { X, CheckCircle } from 'lucide-react';
 import { API_BASE_URL, getImageUrl } from '../config/api';
+import SEO from '../components/SEO';
 
 const basicFeatures = [
   'Machine & equipment setup',
@@ -118,6 +118,11 @@ export default function ClassesPage() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-body pt-32 pb-24">
+      <SEO
+        title="Tattoo Academy & Courses"
+        description="Learn tattoo artistry in Dharan, Nepal. Professional 3-month Basic and 6-month Advanced Masterclass covering machine setup, hygiene, linework, and shading."
+        path="/classes"
+      />
       {/* HERO SECTION */}
       <div className="max-w-7xl mx-auto px-8 mb-20 text-center">
         <p className="uppercase tracking-[8px] text-gray-400 text-sm mb-3 font-nav">

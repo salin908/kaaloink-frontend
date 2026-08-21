@@ -1,0 +1,8 @@
+# robots.txt for Kaalo Ink Tattoo Studio (https://kaaloink.com.np)
+
+User-agent: *
+Allow: /
+Disallow: /admin
+
+# Sitemap Location
+Sitemap: https://kaaloink.com.np/sitemap.xml

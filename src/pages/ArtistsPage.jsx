@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Calendar } from 'lucide-react';
 import { artistsData as fallbackArtists } from '../data/artistsData';
 import { API_BASE_URL, getImageUrl } from '../config/api';
+import SEO from '../components/SEO';
 
 const InstagramIcon = ({ className = "w-4 h-4" }) => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -26,6 +27,11 @@ export default function ArtistsPage() {
 
   return (
     <div className="min-h-screen bg-transparent text-white font-body pt-32 pb-24">
+      <SEO
+        title="Resident Tattoo Masters"
+        description="Meet resident tattoo artists at Kaalo Ink Studio in Dharan, Nepal. Master tattooists specializing in Japanese traditional, oriental, fine line, and blackwork."
+        path="/artists"
+      />
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <p className="uppercase tracking-[8px] text-gray-400 text-xs sm:text-sm mb-3">

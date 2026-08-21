@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { galleryData as fallbackGallery } from '../data/galleryData';
 import LightboxModal from '../components/LightboxModal';
+import SEO from '../components/SEO';
 import { API_BASE_URL, getImageUrl } from '../config/api';
 
 // Module level cache to eliminate state re-fetch flash when navigating between pages

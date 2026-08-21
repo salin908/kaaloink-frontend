@@ -5,6 +5,7 @@ import { artistsData as fallbackArtists } from '../data/artistsData';
 import { galleryData as fallbackGallery } from '../data/galleryData';
 import FAQAccordion from '../components/FAQAccordion';
 import LightboxModal from '../components/LightboxModal';
+import SEO from '../components/SEO';
 import { API_BASE_URL, getImageUrl } from '../config/api';
 
 const InstagramIcon = ({ className = "w-4 h-4" }) => (
@@ -42,6 +43,11 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen text-white font-body bg-transparent">
+      <SEO
+        title="Custom Tattoo Art & Academy"
+        description="Kaalo Ink is a premier custom tattoo studio and academy located in Dharan, Nepal. Specializing in Japanese traditional, oriental, fine line, dark surrealism tattoos, and professional training."
+        path="/"
+      />
       {/* 1. HERO SECTION */}
       <section className="relative min-h-screen flex items-center justify-center pt-24 pb-16">
         <div className="text-center px-6 max-w-4xl mx-auto">

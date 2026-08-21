@@ -3,6 +3,7 @@ import { ShoppingBag, Check, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-re
 import { productsData as fallbackProducts, productCategories as fallbackCategories } from '../data/productsData';
 import { API_BASE_URL, getImageUrl } from '../config/api';
 import LightboxModal from '../components/LightboxModal';
+import SEO from '../components/SEO';
 
 // Module level cache to eliminate state re-fetch flash when navigating between pages
 let cachedProducts = null;
@@ -117,6 +118,11 @@ export default function ShopPage({ onAddToCart }) {
 
   return (
     <div className="min-h-screen text-white font-body pt-28 pb-24 bg-transparent">
+      <SEO
+        title="Official Studio Shop & Tattoo Aftercare"
+        description="Shop official Kaalo Ink heavy cotton apparel, natural vegan tattoo aftercare ointment, limited edition dark art prints, and studio patches."
+        path="/shop"
+      />
       {/* HEADER SECTION */}
       <div className="max-w-7xl mx-auto px-6 sm:px-8 text-center mb-16">
         <p className="uppercase tracking-[8px] text-gray-300 text-xs sm:text-sm mb-3">
