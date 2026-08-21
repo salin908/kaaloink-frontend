@@ -384,7 +384,7 @@ export default function HomePage() {
                 View Courses
               </Link>
               <Link
-                to="/booking"
+                to="/classes?enroll=basic"
                 className="px-8 py-4 border border-white/40 bg-transparent text-white font-semibold hover:border-white transition text-center min-w-[200px]"
               >
                 Enroll Now

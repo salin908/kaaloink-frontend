@@ -71,6 +71,17 @@ export default function ClassesPage() {
       .catch(err => console.log('Using local fallback courses:', err));
   }, []);
 
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const enrollParam = params.get('enroll');
+    if (enrollParam && courses.length > 0) {
+      const match = courses.find(c => c.slug === enrollParam || c.title.toLowerCase().includes(enrollParam.toLowerCase())) || courses[0];
+      if (match) {
+        setSelectedCourse(match);
+      }
+    }
+  }, [courses]);
+
   const handleEnrollSubmit = async (e) => {
     e.preventDefault();
 
@@ -220,13 +231,14 @@ export default function ClassesPage() {
 
       {/* ENROLLMENT MODAL */}
       {selectedCourse && (
-        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
-          <div className="border border-white/20 bg-zinc-950 max-w-lg w-full p-8 relative">
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
+          <div className="border border-white/20 bg-zinc-950 max-w-lg w-full p-6 sm:p-8 relative my-auto max-h-[90vh] overflow-y-auto shadow-2xl">
             <button
               onClick={() => setSelectedCourse(null)}
-              className="absolute top-4 right-4 text-gray-400 hover:text-white"
+              className="absolute top-4 right-4 z-20 p-2 text-gray-300 hover:text-white bg-black/60 border border-white/20 hover:border-white transition-all rounded-full"
+              aria-label="Close Modal"
             >
-              <X className="w-5 h-5" />
+              <X className="w-5 h-5 stroke-[2]" />
             </button>
 
             {enrollSubmitted ? (
