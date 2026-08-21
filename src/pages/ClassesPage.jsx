@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { X, CheckCircle } from 'lucide-react';
 import { API_BASE_URL, getImageUrl } from '../config/api';
 import SEO from '../components/SEO';
