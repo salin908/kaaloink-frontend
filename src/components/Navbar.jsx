@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShoppingBag, Menu, X, Calendar, ShieldCheck } from 'lucide-react';
+import { ShoppingBag, Menu, X, Calendar } from 'lucide-react';
 
 export default function Navbar({ cartCount, onOpenCart }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -59,7 +59,7 @@ export default function Navbar({ cartCount, onOpenCart }) {
             </ul>
           </nav>
 
-          {/* Action Buttons: Cart, Admin, Book Now */}
+          {/* Action Buttons: Cart, Book Now */}
           <div className="flex items-center gap-3 sm:gap-5 shrink-0">
             {/* Cart Icon Button */}
             <button
@@ -74,16 +74,6 @@ export default function Navbar({ cartCount, onOpenCart }) {
                 </span>
               )}
             </button>
-
-            {/* Admin Dashboard Link (Visible on 1024px+ screens including iPad Pro) */}
-            <Link
-              to="/admin"
-              className="hidden lg:flex items-center gap-1.5 text-xs font-nav uppercase tracking-[2px] text-gray-400 hover:text-white transition border border-white/20 px-3 py-1.5 rounded-sm"
-              title="Admin Portal"
-            >
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
-              <span>Admin</span>
-            </Link>
 
             {/* Book Now Button */}
             <Link
@@ -124,15 +114,6 @@ export default function Navbar({ cartCount, onOpenCart }) {
                   </Link>
                 </li>
               ))}
-              <li>
-                <Link
-                  to="/admin"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-2 text-gray-400 hover:text-white text-xs"
-                >
-                  Admin Portal
-                </Link>
-              </li>
             </ul>
 
             <Link
