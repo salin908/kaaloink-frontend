@@ -26,19 +26,19 @@ export default function SEO({ title, description, path = '', image = '/images/lo
 
     const ogUrl = document.querySelector('meta[property="og:url"]');
     if (ogUrl) {
-      ogUrl.setAttribute('content', `https://www.kaaloink.com.np${path}`);
+      ogUrl.setAttribute('content', `https://kaaloink.com.np${path}`);
     }
 
     const ogImage = document.querySelector('meta[property="og:image"]');
     if (ogImage && image) {
-      const fullImg = image.startsWith('http') ? image : `https://www.kaaloink.com.np${image}`;
+      const fullImg = image.startsWith('http') ? image : `https://kaaloink.com.np${image}`;
       ogImage.setAttribute('content', fullImg);
     }
 
     // 4. Dynamic Canonical Link Tag
     let canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
-      canonical.setAttribute('href', `https://www.kaaloink.com.np${path}`);
+      canonical.setAttribute('href', `https://kaaloink.com.np${path}`);
     }
   }, [title, description, path, image]);
 
