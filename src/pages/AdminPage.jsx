@@ -1679,13 +1679,25 @@ export default function AdminPage() {
                               <p className="text-gray-400 text-[11px] mt-1">{o.customer?.address}, {o.customer?.city}</p>
                             </td>
 
-                            <td className="p-4">
-                              <div className="space-y-1.5 max-w-xs">
+                            <td className="p-4 min-w-[220px] max-w-[320px]">
+                              <div className="space-y-2">
                                 {o.items && o.items.length > 0 ? (
                                   o.items.map((item, idx) => (
-                                    <div key={idx} className="bg-black/60 border border-white/10 p-2 rounded flex justify-between items-center text-xs">
-                                      <span className="text-gray-200 font-medium truncate">{item.name} <strong className="text-amber-400">(x{item.quantity})</strong></span>
-                                      <span className="text-gray-400 ml-2">NPR {(item.price * item.quantity).toLocaleString()}</span>
+                                    <div key={idx} className="bg-black/80 border border-white/15 p-2.5 rounded-sm flex flex-col gap-1 text-xs">
+                                      <div className="flex justify-between items-start gap-2">
+                                        <span className="text-white font-semibold leading-snug break-words">
+                                          {item.name}
+                                        </span>
+                                        <span className="text-amber-400 font-bold shrink-0 bg-amber-950/60 border border-amber-500/40 px-1.5 py-0.5 rounded-xs text-[11px]">
+                                          x{item.quantity}
+                                        </span>
+                                      </div>
+                                      <div className="text-gray-400 text-[11px] flex justify-between items-center pt-1 border-t border-white/10">
+                                        <span>Price: NPR {Number(item.price || 0).toLocaleString()}</span>
+                                        <span className="text-emerald-400 font-semibold">
+                                          Total: NPR {(Number(item.price || 0) * (item.quantity || 1)).toLocaleString()}
+                                        </span>
+                                      </div>
                                     </div>
                                   ))
                                 ) : (
