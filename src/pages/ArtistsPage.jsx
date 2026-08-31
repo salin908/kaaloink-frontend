@@ -45,13 +45,13 @@ export default function ArtistsPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {artists.map((artist) => {
             const profileSrc = getImageUrl(artist.profileImage);
             return (
               <div
                 key={artist.id}
-                className="border border-white/15 hover:border-white/50 bg-black/60 backdrop-blur-sm transition-all duration-300 group flex flex-col h-full"
+                className="border border-white/15 hover:border-white/50 bg-black/60 backdrop-blur-sm transition-all duration-300 group flex flex-col h-full overflow-hidden"
               >
                 <div className="aspect-[3/4] bg-neutral-900 overflow-hidden relative">
                   <Link to={`/artists/${artist.slug}`} className="block w-full h-full">
@@ -63,7 +63,7 @@ export default function ArtistsPage() {
                   </Link>
                 </div>
 
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-5 sm:p-6 flex flex-col flex-1">
                   <p className="font-nav text-[10px] tracking-[3px] uppercase text-gray-400 mb-2">
                     {artist.title}
                   </p>
@@ -74,29 +74,31 @@ export default function ArtistsPage() {
                     {artist.bio ? artist.bio.replace(/\s*—\s*/g, ', ') : ''}
                   </p>
 
-                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-white/10">
-                    <a
-                      href={artist.instagram}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-gray-400 hover:text-white transition duration-300 flex items-center gap-1.5 font-nav text-xs"
-                    >
-                      <InstagramIcon className="w-4 h-4" />
-                      <span>{artist.handle}</span>
-                    </a>
+                  <div className="mt-auto pt-4 border-t border-white/10 space-y-3">
+                    <div className="flex items-center justify-between">
+                      <a
+                        href={artist.instagram}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-gray-400 hover:text-white transition duration-300 flex items-center gap-1.5 font-nav text-xs truncate max-w-full"
+                      >
+                        <InstagramIcon className="w-4 h-4 shrink-0" />
+                        <span className="truncate">{artist.handle}</span>
+                      </a>
+                    </div>
 
-                    <div className="flex gap-2">
+                    <div className="grid grid-cols-2 gap-2">
                       <Link
                         to={`/artists/${artist.slug}`}
-                        className="font-nav text-[11px] tracking-[2px] uppercase border border-white/40 px-3.5 py-1.5 hover:bg-white hover:text-black transition duration-300 font-medium"
+                        className="font-nav text-[10px] sm:text-[11px] tracking-[1.5px] uppercase border border-white/40 py-2.5 px-1 text-center hover:bg-white hover:text-black transition duration-300 font-medium block truncate"
                       >
                         Bio & Work
                       </Link>
                       <Link
                         to={`/booking?artist=${encodeURIComponent(artist.name)}`}
-                        className="font-nav text-[11px] tracking-[2px] uppercase border border-white/40 px-3.5 py-1.5 hover:bg-white hover:text-black transition duration-300 font-medium flex items-center gap-1"
+                        className="font-nav text-[10px] sm:text-[11px] tracking-[1.5px] uppercase border border-white/40 py-2.5 px-1 text-center hover:bg-white hover:text-black transition duration-300 font-medium flex items-center justify-center gap-1 truncate"
                       >
-                        <Calendar className="w-3 h-3" />
+                        <Calendar className="w-3 h-3 shrink-0" />
                         <span>Book</span>
                       </Link>
                     </div>
