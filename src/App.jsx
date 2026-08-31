@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
@@ -87,6 +87,7 @@ export default function App() {
           <main className="flex-1">
             <Routes>
               <Route path="/" element={<HomePage />} />
+              <Route path="/home" element={<Navigate to="/" replace />} />
               <Route path="/artists" element={<ArtistsPage />} />
               <Route path="/artists/:slug" element={<ArtistBioPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
@@ -94,6 +95,8 @@ export default function App() {
               <Route path="/classes" element={<ClassesPage />} />
               <Route path="/shop" element={<ShopPage onAddToCart={handleAddToCart} />} />
               <Route path="/admin" element={<AdminPage />} />
+              {/* Fallback route to redirect any unknown URL to Home */}
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
 
