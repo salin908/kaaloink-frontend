@@ -84,16 +84,17 @@ export default function ArtistBioPage() {
         </Link>
 
         {/* Artist Header Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center mb-20">
-          <div className="lg:col-span-5 border border-white/20 bg-zinc-950 p-2 overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12 items-center mb-20">
+          <div className="md:col-span-5 border border-white/20 bg-zinc-950 p-2 overflow-hidden max-w-md md:max-w-none mx-auto w-full">
             <img
               src={profileSrc}
               alt={artist.name}
-              className="w-full h-auto aspect-[3/4] object-cover"
+              className="w-full h-auto aspect-[3/4] object-cover transition-transform duration-500 hover:scale-102"
+              style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
           </div>
 
-          <div className="lg:col-span-7 space-y-6">
+          <div className="md:col-span-7 space-y-6">
             <p className="font-nav text-xs tracking-[4px] uppercase text-gray-400">
               Resident Artist Profile
             </p>
@@ -120,11 +121,10 @@ export default function ArtistBioPage() {
               </a>
 
               <Link
-                to={`/booking?artist=${encodeURIComponent(artist.name || '')}`}
-                className="border border-white bg-white text-black font-semibold px-6 py-3 hover:bg-gray-200 transition flex items-center gap-2"
+                to={`/booking?artist=${encodeURIComponent(artist.name)}`}
+                className="border border-white bg-white text-black hover:bg-transparent hover:text-white px-6 py-3 flex items-center gap-2 transition font-semibold"
               >
-                <span>Book Appointment with {(artist.name || 'Artist').split(' ')[0]}</span>
-                <ExternalLink className="w-4 h-4" />
+                <span>Book Session with {artist.name?.split(' ')[0]}</span>
               </Link>
             </div>
           </div>
@@ -159,6 +159,7 @@ export default function ArtistBioPage() {
                       src={workImg}
                       alt={work.title || artist.name || 'Tattoo Work'}
                       className="w-full h-full object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition duration-500"
+                      style={{ imageRendering: '-webkit-optimize-contrast' }}
                     />
                   {work.isPinned && (
                     <span className="absolute top-3 left-3 bg-amber-500 text-black font-nav text-[10px] font-bold px-2.5 py-1 rounded-xs tracking-[1.5px] uppercase shadow-lg z-10">
