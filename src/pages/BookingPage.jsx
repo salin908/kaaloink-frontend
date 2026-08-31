@@ -228,8 +228,8 @@ export default function BookingPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              <div className="w-full min-w-0">
                 <label htmlFor="service" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
                   Service Preferred *
                 </label>
@@ -239,7 +239,7 @@ export default function BookingPage() {
                   required
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer"
+                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer box-border"
                 >
                   <option value="New Tattoo">New Custom Tattoo</option>
                   <option value="Cover Up">Tattoo Cover Up</option>
@@ -248,7 +248,7 @@ export default function BookingPage() {
                 </select>
               </div>
 
-              <div>
+              <div className="w-full min-w-0">
                 <label htmlFor="artist" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
                   Preferred Artist
                 </label>
@@ -257,7 +257,7 @@ export default function BookingPage() {
                   name="artist"
                   value={formData.artist}
                   onChange={handleInputChange}
-                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer"
+                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer box-border"
                 >
                   <option value="Any Available">Any Available Artist</option>
                   {artistsData.map((artist) => (
@@ -269,8 +269,8 @@ export default function BookingPage() {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+              <div className="w-full min-w-0">
                 <div className="flex justify-between items-center mb-2 h-5">
                   <label htmlFor="date" className="font-nav text-xs tracking-[2px] uppercase text-gray-300">
                     Preferred Date *
@@ -286,12 +286,12 @@ export default function BookingPage() {
                   autoComplete="off"
                   value={formData.date}
                   onChange={handleInputChange}
-                  className="w-full bg-black/50 border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none cursor-pointer"
-                  style={{ colorScheme: 'dark' }}
+                  className="w-full max-w-full bg-black/50 border border-white/20 focus:border-white outline-none px-3 sm:px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none cursor-pointer overflow-hidden box-border block"
+                  style={{ colorScheme: 'dark', boxSizing: 'border-box' }}
                 />
               </div>
 
-              <div>
+              <div className="w-full min-w-0">
                 <div className="flex justify-between items-center mb-2 h-5">
                   <label htmlFor="time" className="font-nav text-xs tracking-[2px] uppercase text-gray-300">
                     Preferred Time *
@@ -306,7 +306,7 @@ export default function BookingPage() {
                   required
                   value={formData.time}
                   onChange={handleInputChange}
-                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer"
+                  className="w-full max-w-full bg-black border border-white/20 focus:border-white outline-none px-3 sm:px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer box-border block"
                 >
                   <option value="">Select Appointment Slot...</option>
                   {availableTimeSlots.map((slot) => (
