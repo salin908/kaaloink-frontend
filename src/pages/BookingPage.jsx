@@ -271,50 +271,47 @@ export default function BookingPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               <div className="w-full min-w-0">
-                <div className="flex justify-between items-center mb-2 h-5">
-                  <label htmlFor="date" className="font-nav text-[12px] tracking-[2px] uppercase text-gray-300" style={{ WebkitTextSizeAdjust: '100%' }}>
-                    Preferred Date *
-                  </label>
+                <label htmlFor="date" className="block font-nav text-[12px] tracking-[2px] uppercase text-gray-300 mb-2" style={{ WebkitTextSizeAdjust: '100%' }}>
+                  Preferred Date *
+                </label>
+                <div className="w-full bg-black/50 border border-white/20 focus-within:border-white h-[48px] px-3 sm:px-4 flex items-center transition duration-300 rounded-none">
+                  <input
+                    type="date"
+                    id="date"
+                    name="date"
+                    required
+                    min={todayDateStr}
+                    max={maxDateStr}
+                    autoComplete="off"
+                    value={formData.date}
+                    onChange={handleInputChange}
+                    className="w-full bg-transparent border-none outline-none text-white text-xs sm:text-sm cursor-pointer p-0 m-0 h-full font-body"
+                    style={{ colorScheme: 'dark', background: 'transparent', WebkitAppearance: 'none' }}
+                  />
                 </div>
-                <input
-                  type="date"
-                  id="date"
-                  name="date"
-                  required
-                  min={todayDateStr}
-                  max={maxDateStr}
-                  autoComplete="off"
-                  value={formData.date}
-                  onChange={handleInputChange}
-                  className="w-full max-w-full bg-black/50 border border-white/20 focus:border-white outline-none px-3 sm:px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none cursor-pointer overflow-hidden box-border block"
-                  style={{ colorScheme: 'dark', boxSizing: 'border-box' }}
-                />
               </div>
 
               <div className="w-full min-w-0">
-                <div className="flex justify-between items-center mb-2 h-5">
-                  <label htmlFor="time" className="font-nav text-[12px] tracking-[2px] uppercase text-gray-300" style={{ WebkitTextSizeAdjust: '100%' }}>
-                    Preferred Time *
-                  </label>
-                  <span className="text-[10px] text-gray-400 font-nav tracking-[1px] uppercase hidden sm:inline-block">
-                    10:00 AM – 9:00 PM
-                  </span>
+                <label htmlFor="time" className="block font-nav text-[12px] tracking-[2px] uppercase text-gray-300 mb-2" style={{ WebkitTextSizeAdjust: '100%' }}>
+                  Preferred Time *
+                </label>
+                <div className="w-full bg-black border border-white/20 focus-within:border-white h-[48px] px-3 sm:px-4 flex items-center transition duration-300 rounded-none">
+                  <select
+                    id="time"
+                    name="time"
+                    required
+                    value={formData.time}
+                    onChange={handleInputChange}
+                    className="w-full bg-transparent border-none outline-none text-white text-xs sm:text-sm appearance-none cursor-pointer p-0 m-0 h-full font-body"
+                  >
+                    <option value="" className="bg-black text-white">Select Appointment Slot...</option>
+                    {availableTimeSlots.map((slot) => (
+                      <option key={slot} value={slot} className="bg-black text-white">
+                        {slot}
+                      </option>
+                    ))}
+                  </select>
                 </div>
-                <select
-                  id="time"
-                  name="time"
-                  required
-                  value={formData.time}
-                  onChange={handleInputChange}
-                  className="w-full max-w-full bg-black border border-white/20 focus:border-white outline-none px-3 sm:px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer box-border block"
-                >
-                  <option value="">Select Appointment Slot...</option>
-                  {availableTimeSlots.map((slot) => (
-                    <option key={slot} value={slot}>
-                      {slot}
-                    </option>
-                  ))}
-                </select>
               </div>
             </div>
 
