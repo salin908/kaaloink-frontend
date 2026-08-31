@@ -271,9 +271,11 @@ export default function BookingPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="date" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
-                  Preferred Date *
-                </label>
+                <div className="flex justify-between items-center mb-2 h-5">
+                  <label htmlFor="date" className="font-nav text-xs tracking-[2px] uppercase text-gray-300">
+                    Preferred Date *
+                  </label>
+                </div>
                 <input
                   type="date"
                   id="date"
@@ -290,9 +292,14 @@ export default function BookingPage() {
               </div>
 
               <div>
-                <label htmlFor="time" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2 truncate">
-                  Preferred Time (9:00 AM - 9:00 PM) *
-                </label>
+                <div className="flex justify-between items-center mb-2 h-5">
+                  <label htmlFor="time" className="font-nav text-xs tracking-[2px] uppercase text-gray-300">
+                    Preferred Time *
+                  </label>
+                  <span className="text-[10px] text-gray-400 font-nav tracking-[1px] uppercase hidden sm:inline-block">
+                    10:00 AM – 9:00 PM
+                  </span>
+                </div>
                 <select
                   id="time"
                   name="time"
