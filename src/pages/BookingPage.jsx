@@ -162,7 +162,7 @@ export default function BookingPage() {
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="firstName" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
+                <label htmlFor="firstName" className="block font-nav text-[12px] tracking-[2px] uppercase text-gray-300 mb-2" style={{ WebkitTextSizeAdjust: '100%' }}>
                   First Name *
                 </label>
                 <input
@@ -178,7 +178,7 @@ export default function BookingPage() {
               </div>
 
               <div>
-                <label htmlFor="lastName" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
+                <label htmlFor="lastName" className="block font-nav text-[12px] tracking-[2px] uppercase text-gray-300 mb-2" style={{ WebkitTextSizeAdjust: '100%' }}>
                   Last Name *
                 </label>
                 <input
@@ -196,7 +196,7 @@ export default function BookingPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="phone" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
+                <label htmlFor="phone" className="block font-nav text-[12px] tracking-[2px] uppercase text-gray-300 mb-2" style={{ WebkitTextSizeAdjust: '100%' }}>
                   Phone Number *
                 </label>
                 <input
@@ -212,7 +212,7 @@ export default function BookingPage() {
               </div>
 
               <div>
-                <label htmlFor="email" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
+                <label htmlFor="email" className="block font-nav text-[12px] tracking-[2px] uppercase text-gray-300 mb-2" style={{ WebkitTextSizeAdjust: '100%' }}>
                   Email Address *
                 </label>
                 <input
@@ -230,7 +230,7 @@ export default function BookingPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               <div className="w-full min-w-0">
-                <label htmlFor="service" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
+                <label htmlFor="service" className="block font-nav text-[12px] tracking-[2px] uppercase text-gray-300 mb-2" style={{ WebkitTextSizeAdjust: '100%' }}>
                   Service Preferred *
                 </label>
                 <select
@@ -249,7 +249,7 @@ export default function BookingPage() {
               </div>
 
               <div className="w-full min-w-0">
-                <label htmlFor="artist" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
+                <label htmlFor="artist" className="block font-nav text-[12px] tracking-[2px] uppercase text-gray-300 mb-2" style={{ WebkitTextSizeAdjust: '100%' }}>
                   Preferred Artist
                 </label>
                 <select
@@ -272,7 +272,7 @@ export default function BookingPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
               <div className="w-full min-w-0">
                 <div className="flex justify-between items-center mb-2 h-5">
-                  <label htmlFor="date" className="font-nav text-xs tracking-[2px] uppercase text-gray-300">
+                  <label htmlFor="date" className="font-nav text-[12px] tracking-[2px] uppercase text-gray-300" style={{ WebkitTextSizeAdjust: '100%' }}>
                     Preferred Date *
                   </label>
                 </div>
@@ -293,7 +293,7 @@ export default function BookingPage() {
 
               <div className="w-full min-w-0">
                 <div className="flex justify-between items-center mb-2 h-5">
-                  <label htmlFor="time" className="font-nav text-xs tracking-[2px] uppercase text-gray-300">
+                  <label htmlFor="time" className="font-nav text-[12px] tracking-[2px] uppercase text-gray-300" style={{ WebkitTextSizeAdjust: '100%' }}>
                     Preferred Time *
                   </label>
                   <span className="text-[10px] text-gray-400 font-nav tracking-[1px] uppercase hidden sm:inline-block">
@@ -319,7 +319,7 @@ export default function BookingPage() {
             </div>
 
             <div>
-              <label htmlFor="description" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
+              <label htmlFor="description" className="block font-nav text-[12px] tracking-[2px] uppercase text-gray-300 mb-2" style={{ WebkitTextSizeAdjust: '100%' }}>
                 Tattoo Idea / Description *
               </label>
               <textarea
