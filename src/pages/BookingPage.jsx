@@ -239,7 +239,7 @@ export default function BookingPage() {
                   required
                   value={formData.service}
                   onChange={handleInputChange}
-                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300"
+                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer"
                 >
                   <option value="New Tattoo">New Custom Tattoo</option>
                   <option value="Cover Up">Tattoo Cover Up</option>
@@ -257,7 +257,7 @@ export default function BookingPage() {
                   name="artist"
                   value={formData.artist}
                   onChange={handleInputChange}
-                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300"
+                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer"
                 >
                   <option value="Any Available">Any Available Artist</option>
                   {artistsData.map((artist) => (
@@ -284,12 +284,13 @@ export default function BookingPage() {
                   autoComplete="off"
                   value={formData.date}
                   onChange={handleInputChange}
-                  className="w-full bg-black/50 border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300"
+                  className="w-full bg-black/50 border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none cursor-pointer"
+                  style={{ colorScheme: 'dark' }}
                 />
               </div>
 
               <div>
-                <label htmlFor="time" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2">
+                <label htmlFor="time" className="block font-nav text-xs tracking-[2px] uppercase text-gray-300 mb-2 truncate">
                   Preferred Time (9:00 AM - 9:00 PM) *
                 </label>
                 <select
@@ -298,7 +299,7 @@ export default function BookingPage() {
                   required
                   value={formData.time}
                   onChange={handleInputChange}
-                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300"
+                  className="w-full bg-black border border-white/20 focus:border-white outline-none px-4 py-3 text-white transition duration-300 h-[48px] min-h-[48px] text-xs sm:text-sm rounded-none appearance-none cursor-pointer"
                 >
                   <option value="">Select Appointment Slot...</option>
                   {availableTimeSlots.map((slot) => (

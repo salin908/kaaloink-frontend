@@ -70,12 +70,14 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
-      <div
-        className="min-h-screen bg-cover bg-center bg-fixed text-white flex flex-col font-body selection:bg-white selection:text-black relative"
-        style={{ backgroundImage: "url('/images/hero1.jpg')" }}
-      >
-        {/* Dark Overlay Layer */}
-        <div className="absolute inset-0 bg-black/60 min-h-full" />
+      <div className="min-h-screen text-white flex flex-col font-body selection:bg-white selection:text-black relative">
+        {/* Fixed Fullscreen HD Background Layer (Ultra-Sharp on iPad, iPhone, & Desktop) */}
+        <div
+          className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat pointer-events-none transform-gpu"
+          style={{ backgroundImage: "url('/images/hero1.jpg')" }}
+        >
+          <div className="absolute inset-0 bg-black/65" />
+        </div>
 
         {/* Content Container */}
         <div className="relative z-10 flex flex-col min-h-screen flex-1">
